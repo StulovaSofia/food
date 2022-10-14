@@ -1,10 +1,11 @@
+html {
+	overflow-x: hidden;
+}
+
+
 @media (max-width: 1300px) {
 	.sidepanel {
 		display: none;
-	}
-
-	body {
-		overflow-x: hidden;
 	}
 
 	.offer {
@@ -402,9 +403,5 @@
 	.modal__title {
 		font-size: 18px;
 		max-width: 213px;
-	}
-
-	body {
-		width: 430px;
 	}
 }
