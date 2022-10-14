@@ -179,15 +179,15 @@ window.addEventListener('DOMContentLoaded', () => {
 			this.parent.append(element);
 		}
 	}
-	const getResourse = async (url) => {
-		const res = await fetch(url);
+	// const getResourse = async (url) => {
+	// 	const res = await fetch(url);
 
-		if (!res.ok) {
-			throw new Error(`Could not fetch ${url}, status: ${res.status}`);
-		}
+	// 	if (!res.ok) {
+	// 		throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+	// 	}
 
-		return await res.json();
-	};
+	// 	return await res.json();
+	// };
 
 	// getResourse('http://localhost:3000/menu')
 	// 	.then(data => {
@@ -196,12 +196,37 @@ window.addEventListener('DOMContentLoaded', () => {
 	// 		});
 	// 	});
 
-	axios.get('http://localhost:3000/menu')
-		.then(data => {
-			data.data.forEach(({ img, altimg, title, descr, price }) => {
-				new MenuCard(img, altimg, title, descr, price, '.menu .container').render();
-			});
-		});
+	new MenuCard(
+		"img/tabs/vegy.jpg",
+		"vegy",
+		'Меню "Фитнес"',
+		'Меню "Фитнес" - это новый подход к приготовлению блюд: больше свежих овощей и фруктов. Продукт активных и здоровых людей. Это абсолютно новый продукт с оптимальной ценой и высоким качеством!',
+		9,
+		'.menu .container',
+		'menu__item',
+		'big'
+	).render();
+
+	new MenuCard(
+		"img/tabs/elite.jpg",
+		"elite",
+		'Меню “Премиум”',
+		'В меню “Премиум” мы используем не только красивый дизайн упаковки, но и качественное исполнение блюд. Красная рыба, морепродукты, фрукты - ресторанное меню без похода в ресторан!',
+		14,
+		'.menu .container',
+		'menu__item'
+	).render();
+
+	new MenuCard(
+		"img/tabs/post.jpg",
+		"post",
+		'Меню "Постное"',
+		'Меню "Постное" - это тщательный подбор ингредиентов: полное отсутствие продуктов животного происхождения, молоко из миндаля, овса, кокоса или гречки, правильное количество белков за счет тофу и импортных вегетарианских стейков.',
+		21,
+		'.menu .container',
+		'menu__item'
+	).render();
+
 
 	// Forms
 
