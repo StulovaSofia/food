@@ -1,5 +1,6 @@
-html {
-	overflow-x: hidden;
+html, body {
+	width: auto !important;
+	overflow-x: hidden !important
 }
 
 
