@@ -403,4 +403,8 @@
 		font-size: 18px;
 		max-width: 213px;
 	}
+
+	body {
+		width: 430px;
+	}
 }
